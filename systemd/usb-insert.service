@@ -1,0 +1,8 @@
+[Unit]
+Description=Play USB sound
+
+[Service]
+User=rzero
+Type=oneshot
+Environment="XDG_RUNTIME_DIR=/run/user/1000"
+ExecStart=/usr/bin/ffplay -nodisp -autoexit /etc/sounds/connect.mp3
